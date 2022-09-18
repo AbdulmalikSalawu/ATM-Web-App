@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+</head>
+<body>
+   
+   <h1 class="text-black mt-5">BASIC ATM FORMAT</h1>
+    <table class="col-sm-10 col-md-8 col-lg-5  mt-5">
+    <tr class="w">
+        <td><button onclick="withdraw()" class="b1 ms-4 agidi"> WITHDRAWAL</button></td>
+        <td><button onclick="clearAll()"class="btn ms-lg-5 w-lg-50 fw-bold text-black clear">CLEAR</button></td>
+        <td><button class="b2 me-4 ">PAY BILLS</button> </td>
+    </tr>
+    <tr>
+        <td><button onclick="deposit()" class="b1 mb-3">DEPOSIT</button></td>
+        <td><input class="col-8 m-auto d-block mb-3 fw-bold text-center text-white" type="number" placeholder="input amount" id="userAmount"></td>
+        <td><button class="b2 mb-3">AIRTIME</button> </td>
+    </tr>
+    <tr>
+        <td><button class="b1">TRANSFER</button></td>
+        <td class="bal fs-3"><p id="disp" class="text-center text-black">Your Balance</p></td>
+        <td><button onclick="checkBalance()" class="b2">Check balance</button></td>
+    </tr>
+   </table>
+   <script>
+      var balance = 1000
+      var mySong = new Audio("songname")
+
+      function withdraw(){
+         var amount = userAmount.value
+         balance = balance-amount
+         if(amount<=balance && amount>0){
+            alert ("Withdrawal successful and your balance is " + balance)
+         }
+         else if (amount>balance){
+            alert ("Insufficient Funds!")
+         }
+         else if ( amount<balance){
+            alert("invalid")
+         }
+         else if (amount==""){
+            alert ("kindly enter an amount")
+         }
+      }
+      function deposit(){
+         var amount = Number(userAmount.value)
+         balance = balance + amount
+         if(amount>0){
+
+           alert ("Deposit successful and your balance is "+ balance)
+         }
+         else if(amount<0){
+            alert("invalid")
+         }
+      }
+
+      function checkBalance(){
+         disp.innerText = "Balance is $" + balance
+        // disp.innerHTML = "<h1> balance is" + balance + "</h1>"
+         disp.style.color = "white"
+         //disp.style.backgroundColor = "red"
+         mysong.play()
+      }
+      function clearAll(){
+         disp.innerText = "Your Balance"
+         userAmount.value = ""
+      }
+   </script>
+</body>
+</html>

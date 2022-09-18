@@ -1,0 +1,92 @@
+body{
+    background-color: grey !important;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: serif;
+}
+table{
+    margin: auto;
+    height: 390px;
+    /* background-color: rgb(70, 14, 5); */
+    box-shadow: 1px 1px 10px 2px;
+    border-radius: 19px;
+}
+input{
+    height: 45px;
+    background-color: black;
+    border: thin solid white !important;
+    font-size: 25px !important;
+    border: none;
+    font-family: cursive !important;
+    border-radius: 10px;
+}
+.b1, .b2{
+    height: 60px;
+    width: 130px;
+    border: none;
+    border-radius: 11px;
+    color: white;
+    font-size: 18px;
+}
+.btn{
+    background-color: rgb(13, 133, 127) !important;
+}
+.b1{
+    background-color: rgb(18, 18, 22);
+    margin-left: 16%;
+}
+.b1:hover{
+    background-color: rgb(158, 156, 156);
+    color: black;
+    font-weight: bold;
+}
+.b2{
+    background-color: rgb(3, 48, 3);
+    font-size: 20px;
+}
+.b2:hover{
+    background-color: rgb(24, 95, 24);
+}
+.bal{
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+}
+ .b1, .b2{
+    font-family: 'Times New Roman', Times, serif;
+}
+#disp{
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: rgb(194, 191, 191); */
+}
+@media screen and (max-width:500px) {
+    .b1, .b2, #disp{
+        font-size: 13px;
+    }
+    table{
+        width: 91%;
+    }
+    .b1{
+        width: 60%;
+        overflow: hidden;
+    }
+    .b2{
+        width: 80%;
+    }
+    input{
+        width: 80px !important;
+        font-size: 14px !important;
+        position: relative;
+        right: 18px;
+    }
+    #disp{
+        position: relative;
+        right: 16px;
+    }
+    .clear{
+        font-size: 13px !important;
+        position: relative; right: 10px;
+    }
+}
